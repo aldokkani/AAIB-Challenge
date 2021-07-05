@@ -24,7 +24,7 @@ Furthermore we need a way to _block_ the content and _resolve_ those reports. Th
 
 ## Instructions
 - Please don't spend more than **3 hours**.
-- Choose whatever frameworks you are comfortable with and that lets you achieve a solution in the given time limit. Please nothing too esoteric. We prefer Java, Ruby, Node.js, Python or Elixir.
+- Choose whatever frameworks you are comfortable with and that lets you achieve a solution in the given time limit. Please nothing too esoteric. We prefer Node.js, Python, Java for backend and any flavor of Javascript freamework for Frontend.
 - Provide the solution source code either as zip or as a link to the code repository
 
 ## What we're looking for:
