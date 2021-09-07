@@ -2,9 +2,16 @@ const express = require('express');
 const reports = require('../data/reports.json').elements;
 
 const app = express();
-const PORT = 3000;
+const PORT = 8000;
 
 app.use(express.json());
+
+app.use((_req, res, next) => {
+  res.append('Access-Control-Allow-Origin', ['http://localhost:3000']);
+  res.append('Access-Control-Allow-Methods', 'GET,PUT');
+  res.append('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 
 app.get('/reports', (_req, res) => {
   res.json(reports);
