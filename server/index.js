@@ -5,6 +5,7 @@ const app = express();
 const PORT = 8000;
 
 app.use(express.json());
+app.use(express.static('public'));
 
 app.use((_req, res, next) => {
   res.append('Access-Control-Allow-Origin', ['http://localhost:3000']);
