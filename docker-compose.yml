@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  client:
+    build: client
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
+    container_name: client
+    restart: always
+    depends_on:
+      - server
+    environment:
+      REACT_APP_SERVER_URL: http://localhost:8000
+
+  server:
+    container_name: server
+    restart: always
+    build: server
+    volumes:
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 8000:8000
+    environment:
+      CLIENT_URL: http://localhost:3000
